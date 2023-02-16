@@ -1,11 +1,11 @@
 /**
- * main - A program that prints the size of various types on the computer it is compiled and run on.
+ * main - a c program that prints the size of various types on the computer it is compiled and run on
  * Return : 0(Success)
  */
 #include <stdio.h>
 int main(void)
 {
-	char a;
+        char a;
 	int b;
 	long int c;
 	long long int d;
