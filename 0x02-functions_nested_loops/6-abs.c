@@ -6,7 +6,7 @@
  */
 int _abs(int num)
 {
-	if (a < 0)
+	if (num < 0)
 		num = -(num);
 	else if (num >= 0)
 		num = num;
