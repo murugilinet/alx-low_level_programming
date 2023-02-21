@@ -1,6 +1,7 @@
-# include <stdio.h>
+# include "main.h"
 /**
- * main- orints putcahr
+ * main- main fun
+ * _putchar - prints alphabet putchar
  * Return: always 0
  */
 int main(void)
