@@ -23,9 +23,11 @@ int is_prime_number(int n)
 int prime_number(int a, int b)
 {
 	while (a < b)
+	{
 		if (b % a == 0)
 			return (0);
 		else
 			return (1);
 		return (prime_number(a + 1, b));
+	}
 }
