@@ -9,7 +9,7 @@ int prime_number(int a, int b);
 int is_prime_number(int n)
 {
 	if (n != 0)
-		return (prime_number(2, n));
+		return (prime_number(1, n));
 }
 /**
  * prime_number- prints 1 if input is prime
@@ -21,11 +21,13 @@ int is_prime_number(int n)
  */
 int prime_number(int a, int b)
 {
-	if (a > b)
+	if (b <= 1)
 		return (0);
-	if (b % a != 0 || a != b)
+	if ((b % a == 0) && (a <= b))
 	{
-		prime_number(a + 1, b);
-		return (1);
+		prime_number(a + 1, b)
+		return (0);
 	}
+	return (1)
 }
+
