@@ -23,7 +23,9 @@ int prime_number(int a, int b)
 {
 	if (a > b)
 		return (0);
-	else if (b % a != 0)
+	if (b % a != 0 || a != b)
+	{
 		prime_number(a + 1, b);
 		return (1);
+	}
 }
