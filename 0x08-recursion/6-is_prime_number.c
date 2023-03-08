@@ -8,8 +8,9 @@ int prime_number(int a, int b);
  */
 int is_prime_number(int n)
 {
-	if (n != 0)
-		return (prime_number(1, n));
+	if (n <= 1)
+		return (1);
+	return (prime_number(2, n));
 }
 /**
  * prime_number- prints 1 if input is prime
@@ -21,13 +22,10 @@ int is_prime_number(int n)
  */
 int prime_number(int a, int b)
 {
-	if (b <= 1)
-		return (0);
-	if ((b % a == 0) && (a <= b))
-	{
-		prime_number(a + 1, b)
-		return (0);
-	}
-	return (1)
+	while (a < b)
+		if (b % a == 0)
+			return (0);
+		else
+			return (1);
+		return (prime_number(a + 1, b));
 }
-
