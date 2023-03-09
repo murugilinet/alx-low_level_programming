@@ -26,7 +26,7 @@ int pali_ndrome(int i, char *p)
 
 	if (i < middle)
 	{
-		if (p[i] == p[length - i - 1])
+		if (p[i] != p[length - i - 1])
 			return (0);
 		else if (p[i] == p[length - i - 1])
 			return (1);
