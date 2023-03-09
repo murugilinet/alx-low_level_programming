@@ -24,7 +24,7 @@ int pali_ndrome(int i, char *p)
 	int length = strlen(p);
 	int middle = length / 2;
 
-	if (i < middle)
+	if (i <= middle)
 	{
 		if (p[i] != p[length - i - 1])
 			return (0);
