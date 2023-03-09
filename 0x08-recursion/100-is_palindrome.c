@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
-int_palindrome(int i, char *p);
+int pali_ndrome(int i, char *p);
 /**
  * is_palindrome(char *s)- function that returns 1 if palindrome 0 if not
  * @s: string
@@ -25,9 +25,12 @@ int pali_ndrome(int i, char *p)
 	int middle = length / 2;
 
 	if (i < middle)
+	{
 		if (p[i] != p[length])
 			return (0);
 		else if (p[i] == p[length])
 			return (1);
 		return (pali_ndrome(i + 1, *p));
+	}
+	return (0);
 }
