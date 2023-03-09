@@ -19,13 +19,13 @@ int is_palindrome(char *s)
  */
 int pali_ndrome(int i, char *p)
 {
-	int len = count(p);
+	int length = strlen(p);
+	int middle = length / 2;
 
-	if (i > len)
-		return (0);
-	if (*p != p[i])
-		return (0);
-	else
-		return (1);
-	return (pali_ndrome(i + 1, *p + 1));
+	if (i < middle)
+		if (p[i] != p[length])
+			return (0);
+		else if (p[i] == p[length]
+			return (1);
+		return (pali_ndrome(i + 1, *p));
 }
