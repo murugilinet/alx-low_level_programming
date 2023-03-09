@@ -11,7 +11,7 @@ int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (1);
-	return (pali_ndrome(0, char *s));
+	return (pali_ndrome(0, s));
 }
 /**
  * pali_ndrome- returns 1 if true and 0 if not
@@ -30,7 +30,7 @@ int pali_ndrome(int i, char *p)
 			return (0);
 		else if (p[i] == p[length])
 			return (1);
-		return (pali_ndrome(i + 1, char *p));
+		return (pali_ndrome(i + 1, p));
 	}
 	return (0);
 }
