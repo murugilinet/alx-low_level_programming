@@ -19,7 +19,7 @@ int is_palindrome(char *s)
  * @p: string
  * Return: 1 if true and 0 otherwise
  */
-int pali_ndrome(int i, char p)
+int pali_ndrome(int i, char *p)
 {
 	int length = strlen(p);
 	int middle = length / 2;
