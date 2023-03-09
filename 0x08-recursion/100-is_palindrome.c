@@ -32,5 +32,5 @@ int pali_ndrome(int i, char *p)
 			return (1);
 		return (pali_ndrome(i + 1, p));
 	}
-	return (0);
+	return (1);
 }
