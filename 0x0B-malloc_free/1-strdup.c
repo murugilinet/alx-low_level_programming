@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	int i;
 
 	len = strlen(str);
-	arr = malloc((sizeof(char) * len) + 1);
+	arr = malloc(sizeof(char) * len);
 
 	if (len == 0)
 	{
@@ -33,7 +33,6 @@ char *_strdup(char *str)
 	}
 	arr[i] = '\0';
 	return (arr);
-	_putchar('\n');
 }
 
 
