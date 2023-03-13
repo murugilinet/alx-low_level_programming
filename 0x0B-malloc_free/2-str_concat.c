@@ -12,7 +12,13 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *arr;
-	int len, i;
+	int len, i, j ;  /**i inc for s1 and s2
+			  * j is increment for concatenated string
+			  */
+	if (s1 ==  NULL || s2 == NULL)
+	{
+		return ("");
+	}
 
 	len =  strlen(s1) + strlen(s2);
 
@@ -21,13 +27,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	i = 0;
-	while (i < len)
+	j = 0;
+	while (j < len)
 	{
-		arr[i] = s1[i];
-		arr[i] = s2[i];
-		i++;
+		for (i = 0; s1[i]; i++)
+		{
+			arr[j++] = s1[i];
+		}
+		for (i = 0; s2[i]; i++)
+		{
+			arr[j++] = s2[i];
+		}
+	j++;
 	}
-	arr[i] = '\0';
 	return (arr);
 }
