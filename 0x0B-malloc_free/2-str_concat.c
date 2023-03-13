@@ -15,7 +15,10 @@ char *str_concat(char *s1, char *s2)
 	int len, i, j ;  /**i inc for s1 and s2
 			  * j is increment for concatenated string
 			  */
-	if (s1 ==  NULL || s2 == NULL)
+	if (s1 ==  NULL)
+	{
+		return ("");
+	if (s2 == NULL)
 	{
 		return ("");
 	}
