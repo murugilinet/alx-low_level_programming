@@ -12,7 +12,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *arr;
-	int len = 0, i, j ;  /**i inc for s1 and s2
+	int len = 0, i, j = 0 ;  /**i inc for s1 and s2
 			  * j is increment for concatenated string
 			  */
 	if (s1 ==  NULL)
@@ -32,7 +32,6 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	j = 0;
 	while (j < len)
 	{
 		for (i = 0; s1[i]; i++)
