@@ -3,7 +3,7 @@
 /**
  * *argstostr- concatenates all arguments of program
  * @ac:  argument count
- * @av: pointer to argument values strings
+ * @av: pointer to a string of pointers of argument values strings
  * Return: null if failure and pointer to a new string if success
  */
 char *argstostr(int ac, char **av)
@@ -13,34 +13,35 @@ char *argstostr(int ac, char **av)
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
-	arr = malloc(sizeof(char) * ac);
-
-	if (arr != NULL)
+	for (i = 0; i < ac; i++)
 	{
-		for (i = 0; i < ac; i++)
-		{
-			if (arr[i] != NULL)
-			{
-				arr[i] = av[i];
-				_putchar('\n');
-			}
-			else
-			{
-				while (i >= 0)
-				{
-					free(arr[i]);
-					i--;
-				}
-				free(arr);
-				return (NULL);
-			}
-		}
-		return (arr);
+		for (j = 0; av[i][j] != '\0'; j++)
+			len++;
+		len++;
 	}
-	else
+	len++;
+
+
+	arr = malloc(sizeof(char) * len);
+
+	if (arr == NULL)
 	{
+		free(arr);
 		return (NULL);
 	}
-	return (0);
+
+	else
+	{
+		k = 0;
+		for (i = 0; i < ac; i++)
+		{
+			for (j = 0; av[i][j] != '\0'; j++, k++)
+			{
+				arr[k] = av[i][j];
+			}
+			arr[k] = '\n';
+			k++;
+		}
+	}
+	return (arr);
 }
