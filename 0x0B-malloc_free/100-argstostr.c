@@ -8,8 +8,9 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i;
-	char **arr;
+	int i, j, k;
+	int len = 0;
+	char *arr;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -42,6 +43,6 @@ char *argstostr(int ac, char **av)
 			arr[k] = '\n';
 			k++;
 		}
+		return (arr);
 	}
-	return (arr);
 }
