@@ -26,7 +26,6 @@ char *argstostr(int ac, char **av)
 				arr[i] = av[i];
 				_putchar('\n');
 			}
-			return (arr);
 			else
 			{
 				while (i >= 0)
@@ -38,9 +37,11 @@ char *argstostr(int ac, char **av)
 				return (NULL);
 			}
 		}
+		return (arr);
 	}
 	else
 	{
 		return (NULL);
 	}
+	return (0);
 }
