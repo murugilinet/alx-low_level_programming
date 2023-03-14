@@ -1,10 +1,11 @@
 #include"main.h"
+#include<stdlib.h>
 /**
  * **alloc_grid- returns pointer to a 2 dimensional
  * array of integers
  * @width: width of array
  * @height: height of array
- * Return: null if failure
+ * Return: NULL if failure
  */
 int **alloc_grid(int width, int height)
 {
@@ -25,7 +26,7 @@ int **alloc_grid(int width, int height)
 			if (arr[i] != NULL)
 			{
 				for (j = 0; j < width; j++)
-					*arr[i][j] = 0;
+					arr[i][j] = 0;
 			}
 			else
 			{
