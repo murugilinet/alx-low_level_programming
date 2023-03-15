@@ -10,7 +10,7 @@ char **strtow(char *str)
 	char **arr;
 	int words = 0, i, j, k, l, m, len;
 
-	if (str == NULL || str == "")
+	if ((str == NULL) || (str == ""))
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)/*gets number of words*/
 	{
