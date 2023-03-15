@@ -8,14 +8,15 @@
 char **strtow(char *str)
 {
 	char **arr;
-	int words = 0, i, j, k, l, len;
+	int words = 0, i, j, k, l, m, len;
 
 	if (str == NULL || str == "")
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)/*gets number of words*/
 	{
-		if (str[i] != ' ' && (str[i + 1] != ' ')
+		if (str[i] != ' ' && (str[i + 1] != ' '))
 			words++;
+		words++;
 	}
 	arr = (char **)malloc(sizeof(char *) * (words + 1));
 
