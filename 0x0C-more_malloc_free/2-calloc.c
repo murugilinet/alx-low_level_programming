@@ -8,7 +8,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *array_mem;
+	char *array_mem;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	array_mem = malloc(size * sizeof(nmemb));
+	array_mem = malloc(nmemb * size);
 
 	if (array_mem == NULL)
 		return (NULL);
