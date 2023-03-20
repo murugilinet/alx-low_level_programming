@@ -33,6 +33,7 @@ char *str_cpy(char *dest, char *src)
 	{
 		dest[inc] = src[inc];
 	}
+	dest[inc] = '\0';
 	return (dest);
 }
 /**
