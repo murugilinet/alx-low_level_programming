@@ -5,6 +5,7 @@
  * given position
  * @head: pointer to pointer of the first element
  * @idx: index where node is to be added
+ * @n: data to be added at the idx index
  * Return: adress of new node
  * NULL if it failed
  */
@@ -13,7 +14,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *newnode, *initial;
 	unsigned int i;
 
-	if (head == NULL && idx != 0) 
+	if (head == NULL && idx != 0)
 		return (NULL);
 	if (idx != 0)
 	{
