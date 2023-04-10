@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * check97- checks for error in number of arguments
- * @argc: rgument count
+ * @argc: argument count
  * Return: nothing
  */
 void check97(int argc)
@@ -83,13 +83,16 @@ int main(int argc, char *argv[])
 	check97(argc);
 	fd1 = open(argv[1], O_RDONLY);
 	check98(fd1, argv[1], -1, -1);
-	fd2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	check99(fd2, argv[2], -1, -1);
+	rfile = 1024;
 	while  (rfile == 1024)
 	{
 		rfile = read(fd1, buffer, 1024);
 		check98(rfile, argv[1], fd1, fd2);
 		wfile = write(fd2, buffer, rfile);
+		if (wfile != rfile)
+			wfile = -1;
 		check99(wfile, argv[2], fd1, fd2);
 	}
 	close1 = close(fd1);
