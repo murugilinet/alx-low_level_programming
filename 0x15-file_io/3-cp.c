@@ -25,7 +25,7 @@ void check98(int test, char *file_name1, int fd1, int fd2)
 {
 	if (test == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s/n", file_name1);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_name1);
 		if (fd1 == -1)
 			close(fd1);
 		if (fd2 == -1)
@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 	fd1 = open(argv[1], O_RDONLY);
 	check98(fd1, argv[1], -1, -1);
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	check99(fd2, argv[2], -1, -1);
+	check99(fd2, argv[2], fd1, -1);
 	rfile = 1024;
 	while  (rfile == 1024)
 	{
