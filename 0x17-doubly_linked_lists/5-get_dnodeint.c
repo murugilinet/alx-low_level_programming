@@ -9,13 +9,13 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int node;
+	unsigned int i;
 
-	if i == NULL)
+	if (head == NULL)
 		return (NULL);
 	if (i == 0)
 		return (head);
-	for (i = 0 i < index; i++)
+	for (i = 0; i < index; i++)
 	{
 		if (head->next == NULL)
 			return (NULL);
